@@ -16,6 +16,6 @@ public:
                 my_ssh_session = ssh_new();  // Create new SSH session
                 if (my_ssh_session == NULL) {  // Check if session creation was successful
                     continue;
-                }  
+                }   
 
              
