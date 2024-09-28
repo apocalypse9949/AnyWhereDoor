@@ -38,7 +38,7 @@ public:
             white_teeth.push_back(host.str());  // Append the generated address to the list (appending means concatenating addresses)
         }
 
-        return white_teeth;  // Return the list of IP addresses
+        return white_teeth;  // Return the list of IP addresses(white teeth😁)
     }
 
     // Function to return a list of SSH credentials to try
