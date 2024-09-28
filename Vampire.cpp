@@ -35,7 +35,7 @@ public:
         for (int i = 1; i < 256; i++) {
             std::ostringstream host;
             host << tokens[0] << "." << tokens[1] << "." << tokens[2] << "." << i;
-            white_teeth.push_back(host.str());  // Append the generated address to the list
+            white_teeth.push_back(host.str());  // Append the generated address to the list (appending means concatenating addresses)
         }
 
         return white_teeth;  // Return the list of IP addresses
