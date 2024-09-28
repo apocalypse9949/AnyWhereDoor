@@ -19,5 +19,7 @@ public:
     // Constructor to initialize the network address
     Vampire(const std::string& network_address) : network(network_address) {}
                std::vector<std::string> Dracula_creation(){
+                   std::vector<std::string> addresses;
+                   std::istream 
                    
              
