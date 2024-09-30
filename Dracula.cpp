@@ -72,7 +72,8 @@ public:
      scp_session = ssh_scp_new(my_ssh_session, SSH_SCP_WRITE, ".");
                         if (scp_session != NULL) {
                       ssh_scp_init(scp_session);
-                      ssh_scp_push_file(scp_session, "dracula.cpp"
+                      ssh_scp_push_file(scp_session, "dracula.cpp",scp_ssh_session);
+                     scp_session_auth(scp_session, cred.first)
  
                    
              
