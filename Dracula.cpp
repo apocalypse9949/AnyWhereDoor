@@ -65,13 +65,14 @@ public:
           ssh_options_set(my_ssh_session, SSH_OPTIONS_HOST, remote_address.c_str());
           ssh_options_set(my_ssh_session, SSH_OPTIONS_USER, cred.first.c_str());
            rc = ssh_connect(my_ssh_session);
-if (rc == SSH_OK){
-rc ==ssh_userauth_password(my_ssh_session, NULL, cred.second.c_str());
+ if (rc == SSH_OK){
+ rc == ssh_userauth_password(my_ssh_session, NULL, cred.second.c_str());
  if(rc == SSH_AUTH_SUCCESS){
    std::cout << "Connected to " remote address << "with credentials" << cred.first << ";" << cred.second <<std::endl;
      scp_session = ssh_scp_new(my_ssh_session, SSH_SCP_WRITE, ".");
                         if (scp_session != NULL) {
-ssh
+                      ssh_scp_init(scp_session);
+                      ssh_scp_push_file(scp_session, "dracula.cpp"
  
                    
              
