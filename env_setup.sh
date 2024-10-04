@@ -1,6 +1,7 @@
 #!/bin/sh
-# This script automates the creation of Python virtual environment. 
-
+# This script automates the creation of a Python virtual environment. 
+# use this your sys do not support a virtual machine 
+# you can follow installation process steps in description 
 if [ -d "virtualenv" ]; then
     echo "Virtual environment 'virtualenv' found, activating it."
 else
