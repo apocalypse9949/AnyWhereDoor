@@ -1,56 +1,34 @@
-#include <iostream>
-#include <cstdlib>
-: ' 
-baseline code reference credit ---->  Patrik Holop in py
-'
-int main() {
-    // Check if Python3 is installed
-    if (system("python3 --version") != 0) {
-        std::cerr << "Python3 is not installed. Please install Python3." << std::endl;
-        return 1;
-    }
+#!/bin/sh
+# This script automates the creation of Python virtual environment. 
 
-    // Check if virtualenv is installed
-    if (system("pip3 show virtualenv > /dev/null 2>&1") != 0) {
-        std::cout << "virtualenv is not installed. Installing virtualenv..." << std::endl;
-        if (system("pip3 install virtualenv") != 0) {
-            std::cerr << "Failed to install virtualenv." << std::endl;
-            return 1;
-        } 
-    }
+if [ -d "virtualenv" ]; then
+    echo "Virtual environment 'virtualenv' found, activating it."
+else
+    echo "Virtual environment not found, creating new 'virtualenv'."
+    python3 -m venv virtualenv
+    if [ $? -eq 0 ]; then
+        echo "Virtual environment was successfully created."
+    else
+        echo "Virtual environment was NOT created, aborting."
+        exit 1
+    fi
+fi
 
-    // Check if the virtual environment folder exists
-    if (system("[ -d venv ]") == 0) {
-        std::cout << "Virtual environment already exists." << std::endl;
-    } else {
-        // Create the virtual environment
-        std::cout << "Creating virtual environment..." << std::endl;
-        if (system("python3 -m venv venv") != 0) {
-            std::cerr << "Failed to create virtual environment." << std::endl;
-            return 1;
-        }
-        std::cout << "Virtual environment created successfully." << std::endl;
-    }
+source virtualenv/bin/activate
+if [ $? -eq 0 ]; then
+    echo "Virtual environment is successfully activated."
+else
+    echo "Virtual environment was NOT activated, aborting."
+    exit 1
+fi
 
-    // Activate the virtual environment
-    std::cout << "Activating the virtual environment..." << std::endl;
-    if (system("source venv/bin/activate") != 0) {
-        std::cerr << "Failed to activate virtual environment." << std::endl;
-        return 1;
-    }
+echo "Installing required packages."
+pip3 install -r requirements.txt
+if [ $? -eq 0 ]; then
+    echo "All requirements were successfully installed."
+else
+    echo "Requirements were NOT installed properly, aborting."
+    exit 1
+fi
 
-    // Install dependencies from requirements.txt if the file exists
-    if (system("[ -f requirements.txt ]") == 0) {
-        std::cout << "Installing dependencies from requirements.txt..." << std::endl;
-        if (system("pip install -r requirements.txt") != 0) {
-            std::cerr << "Failed to install dependencies." << std::endl;
-            return 1;
-        }
-    } else {
-        std::cout << "No requirements.txt file found." << std::endl;
-    }
-
-    std::cout << "Virtual environment is ready. To deactivate, run 'deactivate' in the shell." << std::endl;
-
-    return 0;
-}
+echo "Done."
