@@ -7,7 +7,7 @@ if [ -d "virtualenv" ]; then
 else
     echo "Virtual environment not found, creating new 'virtualenv'."
     python3 -m venv virtualenv
-    if [ $? -eq 0 ]; then
+    if [ $? -eq 0 ]; then 
         echo "Virtual environment was successfully created."
     else
         echo "Virtual environment was NOT created, aborting."
