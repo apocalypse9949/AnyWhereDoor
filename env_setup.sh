@@ -24,7 +24,7 @@ else
 fi
 
 echo "Installing required packages."
-pip3 install -r requirements.txt  # After installing the virtual package install requirements.txt file to install access requirements run on virtua
+pip3 install -r requirements.txt  # After installing the virtual package install requirements.txt file to install access requirements run on virtual
 if [ $? -eq 0 ]; then
     echo "All requirements were successfully installed."
 else
