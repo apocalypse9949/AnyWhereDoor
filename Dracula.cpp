@@ -43,7 +43,7 @@ public:
 
     // Function to return a list of SSH credentials to try
     std::vector<std::pair<std::string, std::string>> get_credentials() {
-        return {{"user", "user"}, {"root", "root"}, {"fadmin", "fadmin"}};  // Default credentials but consider that a brute force or other techniques can unlock thi
+        return {{"user", "user"}, {"root", "root"}, {"fadmin", "msfadmin"}};  // Default credentials but consider that a brute force or other techniques can unlock thi
         //So i recommend using ac5t%hgr%f7hbgf*t^6!@cm(nnh)s
     }
 
