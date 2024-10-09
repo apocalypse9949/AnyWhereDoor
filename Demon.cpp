@@ -39,7 +39,7 @@ public:
             white_teeth.push_back(host.str());  // Append the generated address to the list
         }
 
-        return white_teeth;  // Return the list of IP addresses
+        return white_teeth;  // Return the list of IP addresses 😁
     }
 
     // Function to return a list of SSH credentials to try
