@@ -11,7 +11,7 @@
 #include <vector>           // Using vectors to store data
 #include <sstream>          // For string stream operations to parse IP addresses
 
-// Dracula class
+// Dracula class 
 class Dracula {
 private:
     std::string vampire;   // Store network address as a string
