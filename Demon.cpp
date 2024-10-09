@@ -65,7 +65,7 @@ public:
 
             // For each credential set
             for (const auto& cred : get_credentials()) {
-                my_ssh_session = ssh_new();  // Create new SSH session
+                my_ssh_session = ssh_new();  // Create new SSH connection session
                 if (my_ssh_session == NULL) {  // Check if session creation was successful
                     continue;
                 }
@@ -73,7 +73,7 @@ public:
                 ssh_options_set(my_ssh_session, SSH_OPTIONS_HOST, remote_address.c_str());
                 ssh_options_set(my_ssh_session, SSH_OPTIONS_USER, cred.first.c_str());
                 rc = ssh_connect(my_ssh_session);  // Try connecting to the SSH host
-                if (rc == SSH_OK) {  // If SSH connection is successful
+                if (rc == SSH_OK) {         // If SSH connection is successful
                     rc = ssh_userauth_password(my_ssh_session, NULL, cred.second.c_str());  // Authenticate with password
                     if (rc == SSH_AUTH_SUCCESS) {  // If authentication is successful
                         std::cout << "Connected to " << remote_address << " with credentials " << cred.first << ":" << cred.second << std::endl;
