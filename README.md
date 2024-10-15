@@ -1,24 +1,5 @@
- "********************************************"
- "*                                          *"
- "*      Welcome to the Demon Worm!        *"
- "*     Use responsibly in a virtual env     *"
- "*                                          *"
- "********************************************"
- "              ,     \\    /      ,"
- "             / \\    )\\__/(     / \\"
- "            /   \\  (_\\  /_)   /   \\"
- "   ________/____\\__\\@  @/___/____\\______"
- "  |             |\\../|              |"
- "  |              \\VV/               |"
- "  |      The demon is watching...    |"
- "  |__________________________________|"
- "   |    /\\ /      \\\\       \\ /\\    |"
- "   |  /   V        ))       V   \\  |"
- "   |/     '       //        '     \\|"
- "   `              V                '"
- ""
- "********************************************"
- 
+![Designer (2)](https://github.com/user-attachments/assets/d642bfd6-d75b-40b3-9757-a21e7f1b47f2)
+
 
 Please remember that these are live and dangerous malware! Do NOT run them unless you are absolutely sure of what you are doing! They are to be used only for educational purposes only. !!!
 I highly recommend reviewing these files on a dedicated Virtual Machine that has no Internet access. If you are not careful, you will infect yourself or others with dangerous malware!!!
