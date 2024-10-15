@@ -12,3 +12,25 @@ else
 fi
 
 echo "Dependencies installed!"
+#!/bin/bash
+echo "********************************************"
+echo "*                                          *"
+echo "*      Welcome to the Demon Worm!        *"
+echo "*     Use responsibly in a virtual env     *"
+echo "*                                          *"
+echo "********************************************"
+echo "              ,     \\    /      ,"
+echo "             / \\    )\\__/(     / \\"
+echo "            /   \\  (_\\  /_)   /   \\"
+echo "   ________/____\\__\\@  @/___/____\\______"
+echo "  |             |\\../|              |"
+echo "  |              \\VV/               |"
+echo "  |      The demon is watching...    |"
+echo "  |__________________________________|"
+echo "   |    /\\ /      \\\\       \\ /\\    |"
+echo "   |  /   V        ))       V   \\  |"
+echo "   |/     '       //        '     \\|"
+echo "   `              V                '"
+echo ""
+echo "********************************************"
+ 
