@@ -12,7 +12,6 @@ else
 fi
 
 echo "Dependencies installed!"
-#!/bin/bash
 echo "********************************************"
 echo "*                                          *"
 echo "*      Welcome to the Demon Worm!        *"
