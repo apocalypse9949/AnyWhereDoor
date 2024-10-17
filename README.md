@@ -1,11 +1,11 @@
 ![Designer (2)](https://github.com/user-attachments/assets/d642bfd6-d75b-40b3-9757-a21e7f1b47f2)
 
-
+##  Warning
 Please remember that these are live and dangerous malware! Do NOT run them unless you are absolutely sure of what you are doing! They are to be used only for educational purposes only. !!!
 I highly recommend reviewing these files on a dedicated Virtual Machine that has no Internet access. If you are not careful, you will infect yourself or others with dangerous malware!!!
 
 
-## Installation
+## project Installation
 
 First clone the project into your system
 
@@ -32,7 +32,7 @@ This project demonstrates a network-based worm using SSH and SFTP functionalitie
 ## Prerequisites
 - `libssh` library installed on your system.
 
-## Installation
+## Installation libs
 
 ### 1. Install dependencies
 For Debian-based systems:
@@ -40,9 +40,9 @@ For Debian-based systems:
 sudo apt update
 sudo apt install libssh-dev
 ```
-##  Warning
 
-### 5. **Git Repository**
+
+###  **Git Repository**
 
 You can then commit and push your project to GitHub or any other Git hosting platform. Here’s an example of how to do that:
 
