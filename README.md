@@ -4,7 +4,7 @@
 Please remember that these are live and dangerous malware! Do NOT run them unless you are absolutely sure of what you are doing! They are to be used only for educational purposes only. !!!
 I highly recommend reviewing these files on a dedicated Virtual Machine that has no Internet access. If you are not careful, you will infect yourself or others with dangerous malware!!!
 ## Disclaimer !
-This tool is for educational purposes only, the author do not endorse or promote any illegal activity and are not responsible for any damage done henceforth.
+This is for educational purposes only, the author do not endorse or promote any illegal activity and are not responsible for any damage done henceforth.
 
 
 ## project Installation
